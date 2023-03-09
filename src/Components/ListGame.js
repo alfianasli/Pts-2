@@ -17,7 +17,7 @@ const ListGame = () => {
       }
     );
     setlistGame(res.data);
-    console.log(res.data.slice(0, 20));
+    console.log(res.data.slice(0, 10));
   };
 
   useEffect(() => {
@@ -28,7 +28,7 @@ const ListGame = () => {
     <section id="menu">
       <div className="bg-menu h-full flex flex-col items-center p-32 max-lg:px-4">
         <div className="m-10 p-5  w-full h-full rounded-md flex flex-wrap justify-center gap-6">
-          {listGames?.map((game) => (
+          {listGames?.slice(0, 10).map((game) => (
             <div className=" w-1/4 bg-white h-auto rounded-md card-shadow max-lg:w-full">
               <img
                 src={game.thumbnail}
